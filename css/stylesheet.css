@@ -85,6 +85,120 @@ select {
   font: inherit;
 }
 
+/* Hero Slider */
+.hero {
+  /* Hero Slider */
+  /* Hero Slider Nav */
+}
+.hero__slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 0;
+  left: 0;
+}
+.hero-slider__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-slider__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #202328;
+  opacity: 0.2;
+}
+.hero-slider__item:nth-child(1) {
+  background: url("../img/slider-img.png") no-repeat center/cover;
+}
+.hero-slider__item:nth-child(2) {
+  background: url("../img/project-image.png") no-repeat center/cover;
+}
+.hero-slider__item:nth-child(3) {
+  background: url("../img/bg-img.png") no-repeat center/cover;
+}
+.hero-slider__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 430px;
+  max-height: 90px;
+  border-radius: 10px 0 0 0;
+  background: #202328;
+  padding: 30px 35px;
+}
+.hero-slider__num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90px;
+}
+.hero-slider__num span {
+  font-family: "Roboto";
+  font-size: 15px;
+  color: #818B9D;
+}
+.hero-slider__swtichers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  width: 100%;
+  padding: 0 25px;
+}
+.hero-slider__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.hero-slider__switcher {
+  background: #262832;
+}
+.hero-slider__switcher label {
+  width: 60px;
+  height: 5px;
+}
+.hero-slider__switcher label input {
+  width: 60px;
+  height: 5px;
+}
+.hero-slider__arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  font-size: 20px;
+}
+.hero-slider__prev {
+  padding: 5px;
+}
+.hero-slider__next {
+  padding: 5px;
+}
+
 body {
   font-family: "Raleway", "Roboto", sans-serif;
   font-size: 14px;
@@ -264,11 +378,10 @@ ul, ol, li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 9px;
   z-index: 20;
 }
 .header-social__item a {
-  font-size: 20px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.75);
 }
 .header-social__item a:focus-visible, .header-social__item a:focus-within, .header-social__item a:visited {
@@ -280,136 +393,10 @@ ul, ol, li {
 .hero {
   position: relative;
   max-width: 100%;
-  min-height: 100vmin;
+  min-height: 97vmin;
   margin: 10px;
   border-radius: 10px;
   z-index: 999;
-  /* Hero Slider */
-  /* Hero Slider Nav */
-  /* Hero  */
-}
-.hero__slider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  top: 0;
-  left: 0;
-}
-.hero-slider__item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.hero-slider__item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #202328;
-  opacity: 0.2;
-}
-.hero-slider__item:nth-child(1) {
-  background: url("../img/slider-img.png") no-repeat center/cover;
-}
-.hero-slider__item:nth-child(2) {
-  background: url("../img/project-image.png") no-repeat center/cover;
-}
-.hero-slider__item:nth-child(3) {
-  background: url("../img/bg-img.png") no-repeat center/cover;
-}
-.hero-slider__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 430px;
-  max-height: 90px;
-  border-radius: 10px 0 0 0;
-  background: #202328;
-  padding: 30px 35px;
-}
-.hero-slider__num {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 90px;
-}
-.hero-slider__num span {
-  font-family: "Roboto";
-  font-size: 15px;
-  color: #818B9D;
-}
-.hero-slider__swtichers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 30px;
-  width: 100%;
-  padding: 0 25px;
-}
-.hero-slider__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.hero-slider__switcher {
-  background: #262832;
-}
-.hero-slider__switcher label {
-  width: 60px;
-  height: 5px;
-}
-.hero-slider__switcher label input {
-  width: 60px;
-  height: 5px;
-}
-.hero-slider__arrows {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #fff;
-  font-size: 20px;
-}
-.hero-slider__prev {
-  padding: 5px;
-}
-.hero-slider__next {
-  padding: 5px;
-}
-.hero__content {
-  margin-top: 92px;
-  position: relative;
-  height: 290px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 .hero__title {
   font-size: 58px;
@@ -419,6 +406,7 @@ ul, ol, li {
 }
 .hero__text {
   padding: 8px 15px;
+  margin: 25px 0;
   max-width: 230px;
   font-size: 15px;
   font-weight: 500;
@@ -695,7 +683,7 @@ ul, ol, li {
           box-sizing: border-box;
   min-height: 385px;
   padding: 50px 0;
-  background: url("/img/parntners-bg.png") no-repeat top/cover;
+  background: url("../img/parntners-bg.png") no-repeat top/cover;
 }
 .partners::before {
   content: "";
