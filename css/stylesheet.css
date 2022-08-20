@@ -220,18 +220,6 @@ select {
   transition: 0.2s ease all;
 }
 
-/* Wokrs Slider */
-.works-slider__list {
-  position: relative;
-}
-.works-slider__item {
-  width: 360px;
-  height: 340px;
-}
-.works-slider__content {
-  padding: 25px 30px 30px 30px;
-}
-
 body {
   font-family: "Raleway", "Roboto", sans-serif;
   font-size: 14px;
@@ -369,6 +357,7 @@ ul, ol, li {
 
 /* Header Part */
 .header {
+  position: relative;
   width: 100%;
   padding: 0 15px;
   display: -webkit-box;
@@ -381,6 +370,15 @@ ul, ol, li {
       -ms-flex-align: center;
           align-items: center;
   padding: 30px 0;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  z-index: 999;
+  width: 100%;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 .header__square {
@@ -567,7 +565,7 @@ ul, ol, li {
   background: #202328;
   z-index: 0;
 }
-.works__content {
+.works__inner {
   min-height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -581,7 +579,7 @@ ul, ol, li {
   margin-bottom: 55px;
   z-index: 999;
 }
-.works__text {
+.works__paragraph {
   max-width: 420px;
   text-align: right;
   color: #fff;
@@ -616,7 +614,99 @@ ul, ol, li {
           flex-direction: column;
   max-width: 420px;
 }
-.works__more {
+.works__list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.works__item {
+  width: 360px;
+  height: 340px;
+  background: #fff;
+  border-bottom: 3px solid #E4E6E8;
+  cursor: pointer;
+}
+.works__item:hover {
+  -webkit-box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  border-bottom: 3px solid #F88500;
+}
+.works__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 25px;
+}
+.works__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0;
+}
+.works__marker {
+  margin-right: 10px;
+}
+.works__marker span {
+  width: 20px;
+  height: 20px;
+}
+.works__place {
+  max-height: 25px;
+  display: inline;
+  overflow: hidden;
+  color: #989DA5;
+  font-weight: 800;
+}
+.works__decor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.works__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+  width: 20px;
+}
+.works__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #F88500;
+}
+.works__subtitle {
+  color: #333;
+  font-size: 20px;
+  font-weight: 800;
+}
+.works__btn-more {
   display: block;
   margin: 0 auto;
   margin-top: 45px;
@@ -639,6 +729,7 @@ ul, ol, li {
 .about__left {
   position: relative;
   width: 42%;
+  max-height: 545px;
 }
 .about__img {
   width: 100%;
@@ -683,10 +774,12 @@ ul, ol, li {
   font-size: 52px;
 }
 .about__text {
+  margin-bottom: 25px;
   line-height: 1.8;
 }
 .about-item__text {
   line-height: 1.8;
+  padding: 15px 0;
 }
 .about__list {
   display: -webkit-box;
@@ -697,19 +790,19 @@ ul, ol, li {
           justify-content: space-between;
 }
 .about-list__item {
-  max-width: 48%;
+  width: 266px;
+  min-height: 265px;
 }
 .about__short-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
   border-bottom: 1px solid #e3e3e3;
 }
 .about__short-title img {
   margin-right: 20px;
-}
-.about-item__text {
-  padding: 10px 0;
 }
 .about__dots {
   width: 10%;
@@ -727,6 +820,9 @@ ul, ol, li {
   display: block;
   background: orange;
   border-radius: 50%;
+}
+.about-item__btn {
+  padding: 0;
 }
 
 /* Partners Section*/
