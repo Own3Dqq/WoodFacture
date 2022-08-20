@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.footer__subtitle::after, .blog__date, .blog__item, .about__info, .hero__paragraph, .hero__text, .header-nav__item:hover, .btn {
+.footer__subtitle::after, .blog__dots li, .blog__date, .blog__item, .about__info, .hero__paragraph, .hero__text, .header-nav__item:hover, .btn {
   border-radius: 0 5px 0 5px;
 }
 
@@ -220,6 +220,10 @@ select {
   transition: 0.2s ease all;
 }
 
+li.slick-active {
+  background: #000;
+}
+
 body {
   font-family: "Raleway", "Roboto", sans-serif;
   font-size: 14px;
@@ -248,10 +252,6 @@ ul, ol, li {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.slick-active {
-  background: #000;
 }
 
 .active {
@@ -737,6 +737,8 @@ ul, ol, li {
 }
 .about__right {
   width: 51%;
+  max-height: 545px;
+  overflow: hidden;
 }
 .about__title {
   display: -webkit-box;
@@ -897,6 +899,7 @@ ul, ol, li {
 
 /* Blog Section*/
 .blog {
+  position: relative;
   background: #fff;
   padding: 70px 0;
 }
@@ -928,14 +931,19 @@ ul, ol, li {
 }
 .blog__item {
   position: relative;
-  width: 32%;
+  width: 30%;
+  min-height: 439px;
   max-height: 440px;
   padding: 15px;
+  margin: 0 10px;
+  background: #fff;
   border: 1px solid #eee;
+  cursor: pointer;
 }
 .blog__img {
   position: relative;
   margin-bottom: 20px;
+  height: 204px;
 }
 .blog__img img {
   width: 100%;
@@ -977,11 +985,53 @@ ul, ol, li {
   color: #eeeeee;
 }
 .blog__paragraph {
-  line-height: 1.8;
-  padding: 0 10px;
+  height: 105px;
+  overflow: hidden;
+  padding: 10px 10px;
 }
 .blog__read {
   padding: 0 10px;
+}
+.blog__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.blog__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 95px;
+  max-width: 220px;
+}
+.blog__dots li {
+  width: 25px;
+  height: 5px;
+  background: #E4E6E8;
+}
+.blog__dots li:hover {
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  background: #F88500;
+}
+.blog__dots li button {
+  opacity: 0;
+}
+.blog li.slick-active {
+  background: orange;
 }
 
 /* Footer */

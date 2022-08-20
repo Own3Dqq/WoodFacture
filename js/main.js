@@ -19,19 +19,15 @@ $(document).ready(function () {
 	});
 });
 
-const currentSlide = document.querySelector('.current');
-console.log(currentSlide);
-
-/* Works Slider */
-// $(document).ready(function () {
-// 	$('.works-slider__list').slick({
-// 		arrows: false,
-// 		infinite: false,
-// 		autoplay: false,
-// 		// speed: 300,
-// 		fade: true,
-// 		cssEase: 'linear',
-// 		slidesToShow: 1,
-// 		slidesToScroll: 1,
-// 	});
-// });
+/* Blog Slider */
+$(document).ready(function () {
+	$('.blog__list').slick({
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		arrows: false,
+		infinite: false,
+		dots: true,
+		dotsClass: 'blog__dots',
+		appendDots: '.blog__wrapper',
+	});
+});
